@@ -1,10 +1,11 @@
-// Initialize the Office Add-in.
-Office.onReady(() => {
-  // If needed, Office.js is ready to be called
+Office.onReady(function() {
+    
 });
 
-function openTicketing(event) {
-    var url = "https://link-you-want-to-acces.com/";
+function openTicketingTool(event) {
+    var url = "https://target-url.com";
     Office.context.ui.openBrowserWindow(url);
     event.completed();
 }
+
+Office.actions.associate("openTicketingTool", openTicketingTool);
